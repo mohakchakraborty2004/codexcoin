@@ -1,0 +1,20 @@
+[package]
+name = "hello-world"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["lib", "cdylib"]
+doctest = false
+
+[dependencies]
+soroban-sdk = { workspace = true }
+openzeppelin-pausable = { git = "https://github.com/OpenZeppelin/stellar-contracts", tag = "v0.1.0" }
+openzeppelin-pausable-macros = { git = "https://github.com/OpenZeppelin/stellar-contracts", tag = "v0.1.0" }
+openzeppelin-fungible-token = { git = "https://github.com/OpenZeppelin/stellar-contracts", tag = "v0.1.0" }
+
+
+[dev-dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }
+
